@@ -2,8 +2,16 @@
 
 Contains training scripts for image compression + metalearning experiments. 
 
-**FiLM_baseline.py:** script to train baseline models 
+**FiLM_baseline_model.py:** Defines baseline BMSHJ2018Model 
 
-**cond_FiLM.py:** script to train models with context
+**FiLM_baseline_train.py:** Trains baseline BMSHJ2018Model 
 
-**data_helpers.py:** helper functions for tensorflow dataset loading/creation
+**FiLM_baseline_model.py:** Defines BMSHJ2018Model with context (conditional model)
+
+**FiLM_cond_train.py:** Trains BMSHJ2018Model with context (conditional model)
+
+**FiLM_overfit.py:** Finetunes/overfits trained baseline BMSHJ2018Model to specific datasets
+
+**FiLM_two_stage.py:** Trains context by model by first loading trained baseline model (first stage), and only training context model + conditional layers (second stage)
+
+**data_helpers.py:** Helper functions for tensorflow dataset loading/creation
