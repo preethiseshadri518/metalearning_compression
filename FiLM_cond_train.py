@@ -52,7 +52,7 @@ def train(args):
         # compute loss
         loss_dict  = model.train_step(data, var_sub=None)
 
-        if step % 500 == 0 and step > 0: # to keep track of progress
+        if step % 500 == 0: # to keep track of progress
             print(step, loss_dict)
             with train_summary_writer.as_default():
                 tf.summary.scalar('loss', loss_dict['loss'].numpy(), step=step)
