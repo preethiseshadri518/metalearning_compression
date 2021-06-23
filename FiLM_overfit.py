@@ -77,7 +77,7 @@ def train(args):
                     tf.summary.scalar('bpp', loss_dict['bpp'].numpy(), step=step)
                     tf.summary.scalar('mse', loss_dict['mse'].numpy(), step=step)
                 if step % args.ckpt_freq == 0: # checkpoint
-                    model.save_weights(f'FiLM_datasub/checkpoints/baseline/{model_name}/')
+                    model.save_weights(f'FiLM_datasub/checkpoints_overfit/baseline/{model_name}/')
 
         # save model
         model.save_weights(f'FiLM_datasub/checkpoints_overfit/baseline/{model_name}/')
