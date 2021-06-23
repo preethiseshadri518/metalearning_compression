@@ -49,7 +49,7 @@ def train(args):
         loss_dict  = model.train_step(data, var_sub=None)
 
         # log training progress
-        if step % 500 == 0 and step > 0:
+        if step % 500 == 0:
             print(step, loss_dict)
             with train_summary_writer.as_default():
                 tf.summary.scalar('loss', loss_dict['loss'].numpy(), step=step)
